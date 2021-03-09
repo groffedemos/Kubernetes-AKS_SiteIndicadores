@@ -21,14 +21,10 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      inputs:
-        containerRegistry: 'dockerhub-renatogroffe'
-        command: 'login'
-    - task: Docker@2
       displayName: Build e Push no Docker Hub
       inputs:
         containerRegistry: 'dockerhub-renatogroffe'
-        repository: 'renatogrofffe/siteindicadores-azdevops'
+        repository: 'renatogroffe/siteindicadores-azdevops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
