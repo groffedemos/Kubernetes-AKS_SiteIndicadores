@@ -24,7 +24,7 @@ stages:
       displayName: Build e Push no Docker Hub
       inputs:
         containerRegistry: 'dockerhub-renatogroffe'
-        repository: 'siteindicadores-azdevops'
+        repository: 'renatogrofffe/siteindicadores-azdevops'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
